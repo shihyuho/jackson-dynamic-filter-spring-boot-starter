@@ -9,13 +9,18 @@ addons:
 script: travis_wait 360 mvn -B test -U -e
 cache:
   directories:
-    - '$HOME/.m2/repository'
+  - "$HOME/.m2/repository"
 before_deploy:
-  - gpg --import .travis.key.gpg
-  - mvn versions:set -DnewVersion=${TRAVIS_TAG}
+- gpg --import .travis.key.gpg
+- mvn versions:set -DnewVersion=${TRAVIS_TAG}
 deploy:
   provider: script
   skip_cleanup: true
   script: mvn clean deploy -e -P release --settings .travis.settings.xml
   on:
     tags: true
+env:
+  global:
+  - secure: XQeNO3d/BBSOtJWSLE0PKuuzF5UaEedevS6QujWAWPjjLN34Cadlg4PEdkj7R4G17TXfBe+aXkEKF2CC7+M7iyfumY0Q1PHFzDU4F3cK5uvo2cxVXVkKPNuIW7GS7LRfxwDP+0LSD1dL2AOtLJ4hKPX1hssxjSJvTgIoepnkJ1bk9NdGC9Q7cmwwPQbux4TGATuqadTBeOqvW6lP72Ou54cgsMAuQg7n3myYGqNHu0elPL1wWS8ciDK06C22tA2yxjSxQlKUazsEA5h4aqrc1YG8Sg24nMNbQgVwPb0/xusFTefhEvyr0IGtc5s/jG4KOb2x7OaFWFk47blo0gA4rW6sktlSPit9q369mVIMUEdUxRevJ+2WQw/P43sajeXc4EHLkL7OEsFwcQsvd63OAhiTD1c8UT/if/9LSAf67vuAhNxWknZ4RNmnowJNnEy7Yddq8mlIZxEwX81rmztAhvdOD7/oIPUKBFqJlUS02xZcCpOachA6QODcFc2weanCvPwi35KMrylPuQ0yX0uKmWtkwbGqhiM/lzvEz1l2J5vgd3yHm++NZpQwTTAeBsBu+JPDVo5lLRpzK9xRXYEgdhPL4qI/EXP4KGysKNurMdjNYs6hmZ4Zg4H3AqFFNUTf+ccfKvHwESfOyi4RZCoOezcGmnl+2F21RlijxaWn6FI=
+  - secure: cKmyrZX7Vmf78ByFPFQGhaj5v7cNVjjZipU1Ky9ylyBVQi/hH9Up1ImcwExQE2wW9HtLO2/U7qlvoV8J4SHhjFrMxLdU/FDHeQJH31UA/KYYJ8rb4z1BiKRHoYfe0ahe1/NtixYQw9JCRf3a4IdR1GKQaFn3b9fiHTsGB+/FPlirdO8FurXGRPxvPiX7XewoxtHuqQJfMeL73TUF6WqEQbv0UIbFQ9DJH5C7pal4x1HoL/WsQM8vH82U2jrC/liJ47JBwGAqU4urzNcnrBIfxydyCFEaIWOjDQ6Pm/BbMWNUOWvEr9VdvirJO4mh4FQ+eUtl+9/LkT6nPz8Lu/ENqqEmrENCZOlI8C2U08Ih8DI/os/0ONihCKF9Zy2ua8WaCfxYiWKJSdWOeGq3gSTPZ5dbrzq85ppgIvjIKa9SF5/VIa39N2J6WGDTJ1AyrWVEIt1IxQEmcwiD8wSD5pC/ZRc2e+wIUkhB7YPzdQWH9QtCH0BYnyahLKhxU+VCGbCmc7cGFJxcX2/JW+tXrxjH4w3qoIxnDVaZVnoAUyA5UZAEz7ATfYWFPUNK5gWVDcye3Oqi0Eb1gMCzjwPlv5/X1lpT1wqweooBNkUiUTxW2iO28BwBHlgXGDfuMGwbYLGPFDXjjUwCAcAY6v4MJ//Vmczwdg0x0ZkKEBq+1Wt01NQ=
+  - secure: QNlwFsXXslPwRy2Qh32dIKmBJHRS2j3B9LsmO3Mh6gneM0y3yPh8cwxtdjRAaJr4BrFrr8CMwHbAyWpOtZZdacHNSjsxxlcp66euoIwJ7OBX612aOd20SE3Lmy7pXPtBGP6hlpjWqsV5kLE49XjS9hKFf3ITkLCvQPxTrUtUUTZo/6mz9qdTVoOuVVvJNjxD3/hHkyRYKFF90lJ4WhnUmR49CEO2cwZEduVxjFaRRnQ7yN5Ul32VPAEOCpgDrSuUKnCfgeirbfQ42ibg9uaweGzvdkSIsBukedymouVh/y+rnEvH7dLgRNiVuox+LdUp/AaYrQubF5KrZLBjjYn/Ajd2PKDgt7GBYVlK8pgLT9S0gfUuIFdmh/ng30Grs+cBueo+cG/199cfrfO/qbgeSyvrDm3R8KrWimpivtd1Va5Diz5xkbvBo8aR3HyvPaxk2cxTMMy94DMtL3mpoIyxg76psUClW17ec8ce1J6OgnE90ixYFhfmw861m9/If6w6VtMN/vci+jtFmZWU2lc07IgnVNRsL+aGU42cPEAqBTUv260vit8hJaBwG3oSIOQ/tt2DiCbAWDc9WgQdvqrgyNkHArfT+IzOiolWmBsstArWJCBe2ZEA/7Zfacpul2+iAISvYfinf0fkNq6m4hc6PHExJQnfwD7pEjInnQshajM=
