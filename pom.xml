@@ -4,7 +4,7 @@
 
 	<groupId>com.github.shihyuho</groupId>
 	<artifactId>jackson-dynamic-filter-spring-boot-starter</artifactId>
-	<version>1.0</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 	
 	<name>jackson-dynamic-filter-spring-boot-starter</name>
