@@ -113,4 +113,4 @@ jackson.dynamic.filter.resolver.class-names=this.is.my.Resolver,yet.another.Reso
 
 ## Code Examples
 
-Actual Spring Boot configurations and examples can be found in the [./_examples/](tree/master/_examples)` directory.
+Actual Spring Boot configurations and examples can be found in the [./_examples/](_examples) directory.
