@@ -1,4 +1,5 @@
 /target/
+/_examples/target/
 .metadata
 bin/
 tmp/
