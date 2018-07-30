@@ -110,3 +110,7 @@ jackson.dynamic.filter.fail-fast=false
 # Resolver classes (with a default constructor) that are not Spring beans, but still need to inject into jackson-dynamic-filter
 jackson.dynamic.filter.resolver.class-names=this.is.my.Resolver,yet.another.Resolver
 ```
+
+## Code Examples
+
+Actual Spring Boot configurations and examples can be found in the [./_examples/](tree/master/_examples)` directory.

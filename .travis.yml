@@ -6,7 +6,11 @@ addons:
   apt:
     packages:
     - oracle-java8-installer
-script: travis_wait 360 mvn -B test -U -e
+script: travis_wait 360 mvn -B test -U -e -Dio.spring.platform.version=$IO_SPRING_PLATFORM
+env:
+  - IO_SPRING_PLATFORM=Athens-SR1
+  - IO_SPRING_PLATFORM=Brussels-SR11
+  - IO_SPRING_PLATFORM=Cairo-SR2
 cache:
   directories:
   - "$HOME/.m2/repository"
