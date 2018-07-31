@@ -63,7 +63,7 @@
 		<dependency>
 			<groupId>com.github.shihyuho</groupId>
 			<artifactId>jackson-dynamic-filter</artifactId>
-			<version>1.0</version>
+			<version>1.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
