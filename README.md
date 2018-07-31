@@ -11,8 +11,10 @@ Spring Boot Starter for [jackson-dynamic-filter](https://github.com/shihyuho/jac
 
 - Java 8 and above
 - [Maven](http://maven.apache.org/) 3.0 and above
-- Dependency versions controlled by Spring IO Platform: [Athens-SR1](https://docs.spring.io/platform/docs/Athens-SR1/reference/htmlsingle/#appendix-dependency-versions)
-
+- Supported Spring IO Platform:
+    - [Athens-SR1](http://docs.spring.io/platform/docs/Athens-SR1/reference/htmlsingle/#appendix-dependency-versions)
+    - [Brussels-SR11](http://docs.spring.io/platform/docs/Brussels-SR11/reference/htmlsingle/#appendix-dependency-versions)
+    - [Cairo-SR2](http://docs.spring.io/platform/docs/Cairo-SR2/reference/htmlsingle/#appendix-dependency-versions)
 
 ## Setup
 
