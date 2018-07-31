@@ -22,14 +22,14 @@ All you need to do is to add dependency in your  Spring Boot Maven project:
 <dependency>
     <groupId>com.github.shihyuho</groupId>
     <artifactId>jackson-dynamic-filter-spring-boot-starter</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
 Or in your Spring Boot Gradle project:
 
 ````groovy
-compile 'com.github.shihyuho:jackson-dynamic-filter-spring-boot-starter:1.0.0'
+compile 'com.github.shihyuho:jackson-dynamic-filter-spring-boot-starter:1.0.1'
 ````
 
 and it's done, have fun!
